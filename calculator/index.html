@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="Calculator">
+        <div class="display">
+            <input class="display-one" type="text" placeholder="0" value="0" disabled>
+            <input class="display-two" type="text" placeholder="0" value="0" readonly>
+        </div>
+        <table>
+            <tr>
+                <td onclick="clicked('(')">(</td>
+                <td onclick="clicked(')')">)</td>
+                <td onclick="clicked('%')" class="percentage">%</td>
+                <td onclick="clicked('/')" class="operation">/</td>
+            </tr>
+            <tr>
+                <td onclick="clicked('7')">7</td>
+                <td onclick="clicked('8')">8</td>
+                <td onclick="clicked('9')">9</td>
+                <td onclick="clicked('*')" class="operation">X</td>
+            </tr>
+            <tr>
+                <td onclick="clicked('4')">4</td>
+                <td onclick="clicked('5')">5</td>
+                <td onclick="clicked('6')">6</td>
+                <td onclick="clicked('-')" class="operation">-</td>
+            </tr>
+            <tr>
+                <td onclick="clicked('1')">1</td>
+                <td onclick="clicked('2')">2</td>
+                <td onclick="clicked('3')">3</td>
+                <td onclick="clicked('+')" class="operation">+</td>
+            </tr>
+            <tr>
+                <td class="delete" id="tooltip">C
+                    <span id="tooltiptext"> Double click to clear all </span>
+                </td>
+                <td onclick="clicked('0')">0</td>
+                <td onclick="clicked('.')">.</td>
+                <td onclick="clickedEqual('=')" class="operationEqual">=</td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr width="100%">
+                <td onclick="clickedDeleteAll()" class="deleteAll">Clear All</td>
+            </tr>
+        </table>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
